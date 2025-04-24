@@ -19,10 +19,13 @@ const SingleProduct = ({ params }: any) => {
         <div className="w-[400px] h-[400px] mx-auto flex flex-col">
             <img src={product?.images} alt="image"/>
         </div>
-        <p>{product.title}</p>
-        <p>{product.description}</p>
-        <p>{product.price}</p>
-        <p>{product.rating}</p>
+        <p className="text-lg font-bold text-center">{product.title}</p>
+        <p className="text-sm text-center">{product.description}</p>
+        <div className="flex justify-center items-center gap-10">
+        <p className="font-bold">Price: {product.price}</p>
+        <p className="font-bold">Rating: {product.rating}</p>
+
+        </div>
     </div>
   </div>
 };
